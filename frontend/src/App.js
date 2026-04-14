@@ -165,7 +165,7 @@ export default function App() {
     setLoading(true);
     setTerminalMsg("Scanning database for discrepancies...");
     try {
-      const res = await axios.post("http://localhost:5000/check-fraud", form);
+      const res = await axios.post("https://fraud-detection-sfak.onrender.com", form);
       const newRecord = {
         ...form, ...res.data,
         location: { lat: 12.97 + Math.random() * 0.08, lng: 77.59 + Math.random() * 0.08 }
